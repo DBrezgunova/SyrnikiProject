@@ -11,9 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
 
-        val textView = findViewById<TextView>(R.id.textView)
-        val imageView = findViewById<ImageView>(R.id.imageView)
-        findViewById<TextView>(R.id.Address)
-        findViewById<TextView>(R.id.Phone)
+        val tvTitle = findViewById<TextView>(R.id.tvTitle)
+        val ivPlace = findViewById<ImageView>(R.id.ivPlace)
+        findViewById<TextView>(R.id.tvAddress)
+        findViewById<TextView>(R.id.tvPhone)
     }
 }
