@@ -1,7 +1,7 @@
 package com.example.syrnikiproject
 
 import android.os.Bundle
-import android.widget.ImageView
+import android.text.Html
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,9 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
 
-        val tvTitle = findViewById<TextView>(R.id.tvTitle)
-        val ivPlace = findViewById<ImageView>(R.id.ivPlace)
-        findViewById<TextView>(R.id.tvAddress)
-        findViewById<TextView>(R.id.tvPhone)
+        val information = "<ul>" +
+                "<li>Доставка: Wolt, Glowo, Chocofood, Яндекс</li>" +
+                "<li>Меню: с шоколадом, с малиной, с ананасом, кокосовые</li>" +
+                "<li> Парковка: Есть, платная</li>" +
+                "<li> Акции: Скидка 30% с 20:00</li>" +
+                "</ul>"
+        val tvInformation = findViewById<TextView>(R.id.tvInformation)
+        tvInformation.text = Html.fromHtml(information)
     }
 }
