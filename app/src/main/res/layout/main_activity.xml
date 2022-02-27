@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Syrniki.kz"
+        android:text="@string/title"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,10 +53,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="8dp"
-            android:text="Сырники с клубникой, вишней, кокосом"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/glVertical50"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Сырники с клубникой, вишней, кокосом" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -66,7 +66,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:text="Адрес: Алматы, Розыбакиева, 247а, ТРЦ Мега Алматы, фуд-корт"
+        android:text="@string/address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/clInformation" />
@@ -78,7 +78,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:text="Тел.:87010391333"
+        android:text="@string/phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAddress" />
