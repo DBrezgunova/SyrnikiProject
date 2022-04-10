@@ -1,8 +1,11 @@
 package com.example.syrnikiproject
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.Html
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -19,5 +22,11 @@ class MainActivity : AppCompatActivity() {
                 "</ul>"
         val tvInformation = findViewById<TextView>(R.id.tvInformation)
         tvInformation.text = Html.fromHtml(information)
+
+        val tvPhone:TextView = findViewById(R.id.tvPhone)
+        tvPhone.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + getString(R.string.phone)))
+            startActivity(intent)
+        }
     }
 }
