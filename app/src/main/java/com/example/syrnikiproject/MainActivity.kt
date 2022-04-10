@@ -1,5 +1,6 @@
 package com.example.syrnikiproject
 
+import android.os.Build
 import android.os.Bundle
 import android.text.Html
 import android.widget.TextView
@@ -18,6 +19,11 @@ class MainActivity : AppCompatActivity() {
                 "<li> Акции: Скидка 30% с 20:00</li>" +
                 "</ul>"
         val tvInformation = findViewById<TextView>(R.id.tvInformation)
-        tvInformation.text = Html.fromHtml(information)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            tvInformation.text = Html.fromHtml(information, Html.FROM_HTML_MODE_LEGACY)
+        } else {
+            @Suppress("DEPRECATION")
+            tvInformation.text = Html.fromHtml(information)
+        }
     }
 }
