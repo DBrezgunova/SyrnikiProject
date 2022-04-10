@@ -1,10 +1,13 @@
 package com.example.syrnikiproject
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +27,12 @@ class MainActivity : AppCompatActivity() {
         } else {
             @Suppress("DEPRECATION")
             tvInformation.text = Html.fromHtml(information)
+        }
+
+        val btnActTwo = findViewById<Button>(R.id.btnActTwo)
+        btnActTwo.setOnClickListener {
+            val intent = Intent(this, ActivityTwo::class.java)
+            startActivity(intent)
         }
     }
 }
